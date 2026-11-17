@@ -1,0 +1,1138 @@
+<!doctype html>
+<html lang="tr">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width,initial-scale=1" />
+<title>İÜ Döner Sermaye — Yardım Merkezi</title>
+<meta name="description" content="İstanbul Üniversitesi Döner Sermaye İşletmesi — sıkça sorulan sorular ve akıllı yardım merkezi." />
+<style>
+:root{
+  --bg:#F0F4FA;--surface:#FFF;--surface-2:#F5F7FB;--border:#DDE3ED;--border-strong:#BCC5D6;
+  --text:#0B1F3A;--text-2:#4A5568;--text-3:#8896AA;
+  --primary:#0B5FFF;--primary-700:#0A4ACC;--primary-50:#EBF1FF;--navy:#0B2C5C;
+  --teal:#0E7C66;--gold:#B5811F;--danger:#B5391F;--focus:#0B5FFF40;
+  --radius:8px;--radius-lg:12px;--radius-xl:16px;
+  --shadow-xs:0 1px 3px rgba(11,31,58,.06);
+  --shadow-sm:0 2px 8px rgba(11,31,58,.08);
+  --shadow-md:0 6px 20px rgba(11,31,58,.10),0 1px 3px rgba(11,31,58,.06);
+  --shadow-lg:0 20px 48px rgba(11,31,58,.16),0 4px 8px rgba(11,31,58,.06);
+  --ease:cubic-bezier(.2,.7,.2,1);
+  --header-h:58px;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html,body{background:var(--bg);color:var(--text);
+  font:15px/1.6 -apple-system,BlinkMacSystemFont,"Segoe UI","Inter","Helvetica Neue",sans-serif;
+  -webkit-font-smoothing:antialiased}
+a{color:var(--primary);text-decoration:none}a:hover{text-decoration:underline}
+button{font:inherit;cursor:pointer}
+button:focus-visible,input:focus-visible,[tabindex]:focus-visible{outline:3px solid var(--focus);outline-offset:2px;border-radius:4px}
+
+/* ── TOP BAR ── */
+.topbar{background:var(--navy);color:#ffffffcc;font-size:12px;height:36px;display:flex;align-items:center}
+.topbar .inner{max-width:1160px;margin:0 auto;padding:0 24px;width:100%;display:flex;align-items:center;gap:16px}
+.topbar a{color:#ffffffcc;transition:color .12s}.topbar a:hover{color:#fff;text-decoration:none}
+.topbar .sep{width:1px;height:12px;background:#ffffff30}
+.topbar .ml{margin-left:auto;display:flex;gap:14px;align-items:center}
+
+/* ── HEADER ── */
+.siteheader{background:#fff;border-bottom:1px solid var(--border);height:var(--header-h);
+  position:sticky;top:0;z-index:40;box-shadow:var(--shadow-xs)}
+.siteheader .inner{max-width:1160px;margin:0 auto;padding:0 24px;height:100%;display:flex;align-items:center;gap:16px}
+.brand{display:flex;align-items:center;gap:10px;color:var(--text)}
+.brand:hover{text-decoration:none}
+.brand .crest{width:36px;height:36px;border-radius:8px;
+  background:linear-gradient(145deg,#0B2C5C 0%,#1a5dc8 100%);
+  display:grid;place-items:center;color:#fff;font-weight:800;font-size:12px;flex:none;
+  box-shadow:0 2px 6px rgba(11,44,92,.3)}
+.brand .name{font-weight:700;font-size:14px;line-height:1.15;letter-spacing:-.01em}
+.brand .name small{display:block;color:var(--text-3);font-weight:500;font-size:11.5px;margin-top:1px}
+nav.primary{margin-left:auto;display:flex;gap:2px}
+nav.primary a{padding:7px 11px;border-radius:6px;color:var(--text-2);font-weight:500;font-size:13.5px;transition:all .12s var(--ease)}
+nav.primary a:hover{background:var(--surface-2);color:var(--text);text-decoration:none}
+.kbd{display:inline-flex;align-items:center;gap:3px;padding:2px 6px;border:1px solid var(--border);border-bottom-width:2px;
+  background:#fff;border-radius:4px;font:11px/1 ui-monospace,Menlo,monospace;color:var(--text-3)}
+
+/* ── HERO ── */
+.hero{background:#fff;border-bottom:1px solid var(--border)}
+.hero .inner{max-width:1160px;margin:0 auto;padding:52px 24px 44px}
+.hero-badge{display:inline-flex;align-items:center;gap:7px;padding:4px 12px;
+  background:var(--primary-50);color:var(--primary-700);border-radius:999px;
+  font-size:12px;font-weight:600;margin-bottom:16px;border:1px solid #C8D9FF;letter-spacing:.02em}
+.hero-badge .dot{width:6px;height:6px;background:var(--primary);border-radius:50%;animation:pulse 2s infinite}
+@keyframes pulse{0%,100%{opacity:1;transform:scale(1)}50%{opacity:.5;transform:scale(.8)}}
+.hero h1{font-size:34px;line-height:1.2;letter-spacing:-.025em;font-weight:800;margin-bottom:10px;max-width:700px;color:var(--text)}
+.hero .lead{color:var(--text-2);font-size:16px;max-width:620px;margin-bottom:28px;line-height:1.65}
+
+.search-wrap{position:relative;max-width:740px}
+.search-field{display:flex;align-items:center;gap:10px;background:#fff;
+  border:1.5px solid var(--border-strong);border-radius:var(--radius-lg);
+  padding:13px 16px;box-shadow:var(--shadow-md);transition:border-color .15s,box-shadow .15s}
+.search-field:focus-within{border-color:var(--primary);box-shadow:0 0 0 4px var(--focus),var(--shadow-md)}
+.search-field svg.ic{color:var(--text-3);flex:none;transition:color .12s}
+.search-field:focus-within svg.ic{color:var(--primary)}
+.search-field input{flex:1;border:0;outline:0;background:transparent;font-size:16px;color:var(--text);min-width:0}
+.search-field input::placeholder{color:var(--text-3)}
+.search-field .clear{display:none;border:0;background:transparent;color:var(--text-3);padding:4px;border-radius:4px;transition:all .12s}
+.search-field .clear:hover{background:var(--surface-2);color:var(--text)}
+.search-wrap.has-val .clear{display:inline-flex}
+
+.results-drop{position:absolute;left:0;right:0;top:calc(100% + 8px);background:#fff;border:1px solid var(--border);
+  border-radius:var(--radius-lg);box-shadow:var(--shadow-lg);overflow:hidden;display:none;max-height:500px;overflow-y:auto;z-index:50}
+.results-drop.open{display:block;animation:drop .18s var(--ease)}
+@keyframes drop{from{opacity:0;transform:translateY(-6px)}to{opacity:1;transform:translateY(0)}}
+.rd-header{padding:9px 16px 7px;font-size:11px;text-transform:uppercase;letter-spacing:.08em;color:var(--text-3);font-weight:700;background:var(--surface-2);border-bottom:1px solid var(--border)}
+.rd-item{display:flex;gap:12px;align-items:flex-start;padding:12px 16px;border-bottom:1px solid var(--border);cursor:pointer;transition:background .1s}
+.rd-item:last-child{border-bottom:0}
+.rd-item:hover,.rd-item.active{background:var(--primary-50)}
+.rd-item .rd-cat{font-size:11px;color:var(--text-3);text-transform:uppercase;letter-spacing:.06em;font-weight:600;margin-bottom:2px}
+.rd-item .rd-q{font-size:14px;font-weight:600;color:var(--text);line-height:1.4}
+.rd-item .rd-a{font-size:12.5px;color:var(--text-2);margin-top:3px;line-height:1.5;display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden}
+.rd-item mark{background:#FFF3B0;color:var(--text);padding:0 2px;border-radius:2px}
+.rd-item .rd-arr{margin-left:auto;color:var(--text-3);flex:none;align-self:center}
+.rd-empty{padding:24px 16px;text-align:center;color:var(--text-2)}
+.rd-empty strong{display:block;color:var(--text);margin-bottom:4px}
+.rd-dym{padding:10px 16px;background:#FFF8E1;color:#7C5E10;border-bottom:1px solid var(--border);font-size:13px}
+.rd-dym button{background:transparent;border:0;color:var(--primary-700);font-weight:600;text-decoration:underline;padding:0}
+
+.chips{display:flex;flex-wrap:wrap;gap:8px;margin-top:18px}
+.chip{display:inline-flex;align-items:center;gap:6px;padding:7px 13px;border:1px solid var(--border-strong);
+  background:#fff;border-radius:999px;color:var(--text-2);font-size:13px;font-weight:500;
+  transition:all .15s var(--ease);cursor:pointer}
+.chip:hover{border-color:var(--primary);color:var(--primary-700);background:var(--primary-50)}
+.chip svg{color:var(--text-3)}.chip:hover svg{color:var(--primary)}
+
+/* ── STATS ── */
+.stats{background:var(--surface-2);border-bottom:1px solid var(--border)}
+.stats .inner{max-width:1160px;margin:0 auto;padding:0 24px;display:flex;align-items:stretch;gap:0}
+.stat{padding:18px 32px;display:flex;align-items:center;gap:10px;border-right:1px solid var(--border)}
+.stat:last-child{border-right:0}
+.stat .sv{font-size:22px;font-weight:800;letter-spacing:-.02em;color:var(--text);line-height:1}
+.stat .sl{font-size:12.5px;color:var(--text-3);font-weight:500;margin-top:2px}
+
+/* ── MAIN ── */
+.wrap{max-width:1160px;margin:0 auto;padding:0 24px}
+
+/* ── SECTION HEADER ── */
+.sh{display:flex;align-items:flex-end;justify-content:space-between;gap:12px;margin-bottom:20px}
+.sh h2{font-size:20px;font-weight:700;letter-spacing:-.015em}
+.sh p{font-size:13.5px;color:var(--text-2);margin-top:3px}
+.sh .slink{font-size:13px;font-weight:600;color:var(--primary);white-space:nowrap}
+
+/* ── CATEGORIES ── */
+#categories{padding:44px 0 0}
+.cat-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:12px}
+@media(max-width:900px){.cat-grid{grid-template-columns:repeat(2,1fr)}}
+@media(max-width:560px){.cat-grid{grid-template-columns:1fr}}
+
+.cat-card{display:flex;flex-direction:column;background:#fff;border:1px solid var(--border);
+  border-radius:var(--radius-lg);padding:18px 20px;cursor:pointer;position:relative;overflow:hidden;
+  transition:transform .15s var(--ease),border-color .15s,box-shadow .15s;text-decoration:none;color:inherit}
+.cat-card:hover{transform:translateY(-2px);border-color:var(--primary);box-shadow:var(--shadow-md);text-decoration:none}
+.cat-card .cc-top{display:flex;align-items:center;gap:12px;margin-bottom:10px}
+.cat-card .cc-ico{width:40px;height:40px;border-radius:10px;display:grid;place-items:center;color:#fff;flex:none}
+.cat-card .cc-ico svg{width:20px;height:20px}
+.cat-card .cc-cnt{font-size:12px;font-weight:600;color:var(--text-3);margin-left:auto}
+.cat-card h3{font-size:14.5px;font-weight:700;margin-bottom:4px;color:var(--text)}
+.cat-card p{font-size:13px;color:var(--text-2);line-height:1.55;flex:1}
+.cat-card .cc-arr{margin-top:12px;font-size:12.5px;font-weight:600;color:var(--primary);
+  display:inline-flex;align-items:center;gap:4px;transition:gap .15s}
+.cat-card:hover .cc-arr{gap:7px}
+
+/* ── CAT QUESTIONS panel ── */
+#cat-questions{display:none;margin-top:14px}
+
+/* ── 2-COL ROW ── */
+.row2{display:grid;grid-template-columns:1.5fr 1fr;gap:20px;padding:40px 0 0}
+@media(max-width:880px){.row2{grid-template-columns:1fr}}
+
+/* ── PANEL ── */
+.panel{background:#fff;border:1px solid var(--border);border-radius:var(--radius-lg);overflow:hidden}
+.panel-head{padding:14px 18px;border-bottom:1px solid var(--border);display:flex;align-items:center;justify-content:space-between;background:var(--surface-2)}
+.panel-head h3{font-size:14px;font-weight:700}
+.panel-head .ptag{font-size:11px;color:var(--text-3);text-transform:uppercase;letter-spacing:.08em;font-weight:700}
+.qlist{list-style:none}
+.qlist li{border-bottom:1px solid var(--border)}
+.qlist li:last-child{border-bottom:0}
+.qlist a{display:flex;align-items:center;gap:12px;padding:13px 18px;color:var(--text);font-size:13.5px;font-weight:500;transition:background .12s}
+.qlist a:hover{background:var(--primary-50);text-decoration:none}
+.qlist .qn{width:22px;height:22px;border-radius:6px;background:var(--surface-2);color:var(--text-3);
+  display:grid;place-items:center;font-size:11.5px;font-weight:700;flex:none;border:1px solid var(--border)}
+.qlist a:hover .qn{background:var(--primary-50);color:var(--primary-700);border-color:var(--primary-50)}
+.qlist .qa{margin-left:auto;color:var(--border-strong)}
+
+/* ── WIZARD CARD ── */
+.wizard-card{padding:22px;background:linear-gradient(145deg,#0B2C5C 0%,#1a5dc8 100%);color:#fff;
+  border-radius:var(--radius-lg);position:relative;overflow:hidden;height:100%}
+.wizard-card::before{content:"";position:absolute;right:-60px;top:-60px;width:220px;height:220px;
+  background:radial-gradient(closest-side,#ffffff14,transparent);border-radius:50%}
+.wizard-card .wc-tag{font-size:10.5px;text-transform:uppercase;letter-spacing:.12em;color:#ffffffcc;font-weight:700;margin-bottom:10px}
+.wizard-card h3{font-size:20px;font-weight:800;margin-bottom:8px;letter-spacing:-.02em}
+.wizard-card p{color:#ffffffd9;font-size:13.5px;line-height:1.6;margin-bottom:18px}
+.wizard-card button{background:#fff;color:var(--navy);border:0;padding:10px 18px;border-radius:8px;
+  font-weight:700;font-size:13.5px;transition:background .12s;box-shadow:0 2px 8px rgba(0,0,0,.2)}
+.wizard-card button:hover{background:#EBF1FF}
+
+/* ── CALCULATOR ── */
+#calculator{padding:40px 0 0}
+.calc-card{background:#fff;border:1px solid var(--border);border-radius:var(--radius-xl);overflow:hidden}
+.calc-head{background:linear-gradient(135deg,#0B2C5C 0%,#0B5FFF 100%);color:#fff;padding:24px 28px}
+.calc-head h2{font-size:20px;font-weight:800;letter-spacing:-.015em;margin-bottom:4px}
+.calc-head p{color:#ffffffcc;font-size:13.5px}
+.calc-body{padding:24px 28px;display:grid;grid-template-columns:1fr 1fr;gap:24px}
+@media(max-width:700px){.calc-body{grid-template-columns:1fr}}
+.calc-left{}
+.form-group{margin-bottom:16px}
+.form-group label{display:block;font-size:12.5px;font-weight:700;color:var(--text-2);text-transform:uppercase;letter-spacing:.06em;margin-bottom:7px}
+.form-group input[type=number],.form-group select{width:100%;padding:11px 14px;border:1.5px solid var(--border-strong);border-radius:var(--radius);
+  font-size:15px;color:var(--text);background:#fff;transition:border-color .12s}
+.form-group input[type=number]:focus,.form-group select:focus{border-color:var(--primary);outline:0;box-shadow:0 0 0 3px var(--focus)}
+.calc-btn{width:100%;padding:12px;background:var(--primary);color:#fff;border:0;border-radius:var(--radius);
+  font-size:15px;font-weight:700;letter-spacing:.01em;transition:background .12s;box-shadow:0 2px 8px rgba(11,95,255,.3)}
+.calc-btn:hover{background:var(--primary-700)}
+
+.calc-right{}
+.calc-result{background:var(--surface-2);border:1px solid var(--border);border-radius:var(--radius-lg);padding:20px;min-height:200px}
+.calc-result .cr-empty{color:var(--text-3);font-size:13.5px;text-align:center;padding:32px 0}
+.cr-row{display:flex;justify-content:space-between;align-items:center;padding:9px 0;border-bottom:1px solid var(--border);font-size:14px}
+.cr-row:last-child{border-bottom:0}
+.cr-row .cr-label{color:var(--text-2)}
+.cr-row .cr-val{font-weight:700;color:var(--text);font-variant-numeric:tabular-nums}
+.cr-row.cr-highlight{background:var(--primary-50);margin:0 -8px;padding:9px 8px;border-radius:6px}
+.cr-row.cr-highlight .cr-label{color:var(--primary-700);font-weight:600}
+.cr-row.cr-highlight .cr-val{color:var(--primary-700);font-size:15px}
+.cr-total{margin-top:12px;padding:12px 14px;background:var(--navy);color:#fff;border-radius:var(--radius);display:flex;justify-content:space-between;align-items:center}
+.cr-total .ct-label{font-size:12.5px;color:#ffffffcc;font-weight:600}
+.cr-total .ct-val{font-size:18px;font-weight:800;font-variant-numeric:tabular-nums}
+
+/* ── CONTACT ── */
+#contact{padding:40px 0 48px}
+.contact-grid{display:grid;grid-template-columns:1fr 1fr;gap:16px}
+@media(max-width:640px){.contact-grid{grid-template-columns:1fr}}
+
+/* ── DRAWER ── */
+.scrim{position:fixed;inset:0;background:#0B1F3A55;backdrop-filter:blur(2px);opacity:0;pointer-events:none;transition:opacity .2s var(--ease);z-index:60}
+.scrim.show{opacity:1;pointer-events:auto}
+.drawer{position:fixed;top:0;right:0;height:100vh;width:min(700px,100%);background:#fff;box-shadow:var(--shadow-lg);
+  transform:translateX(100%);transition:transform .25s var(--ease);z-index:70;display:flex;flex-direction:column}
+.drawer.open{transform:translateX(0)}
+.drawer-head{padding:14px 20px;border-bottom:1px solid var(--border);display:flex;align-items:center;gap:12px;background:#fff;flex:none}
+.drawer-crumbs{font-size:12px;color:var(--text-3);display:flex;align-items:center;gap:6px;flex:1;min-width:0}
+.drawer-crumbs .dc{padding:3px 8px;background:var(--surface-2);border-radius:4px;color:var(--text-2);font-weight:500;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.drawer-crumbs .dc.dcf{color:var(--text);font-weight:700}
+.drawer-close{border:0;background:transparent;color:var(--text-2);padding:6px;border-radius:6px}
+.drawer-close:hover{background:var(--surface-2);color:var(--text)}
+.drawer-body{flex:1;overflow-y:auto;padding:24px 28px 36px}
+.drawer-body h2{font-size:22px;font-weight:800;line-height:1.3;letter-spacing:-.02em;margin-bottom:14px}
+.d-meta{display:flex;gap:8px;flex-wrap:wrap;margin-bottom:18px}
+.d-pill{display:inline-flex;align-items:center;gap:5px;padding:4px 10px;border:1px solid var(--border);border-radius:999px;font-size:12px;color:var(--text-2);background:#fff}
+.d-pill.dp-cat{color:var(--primary-700);background:var(--primary-50);border-color:#C8D9FF}
+.d-answer{font-size:15px;color:var(--text);line-height:1.75;background:var(--surface-2);border:1px solid var(--border);
+  border-left:3px solid var(--primary);padding:16px 20px;border-radius:var(--radius);margin-bottom:24px;overflow-wrap:anywhere}
+.d-section-title{font-size:11.5px;color:var(--text-3);text-transform:uppercase;letter-spacing:.08em;font-weight:700;margin:22px 0 10px}
+.d-forms{display:flex;flex-direction:column;gap:8px}
+.d-form-link{display:flex;align-items:center;gap:12px;padding:12px 14px;background:#fff;border:1px solid var(--border);border-radius:var(--radius);transition:all .12s;color:var(--text)}
+.d-form-link:hover{border-color:var(--primary);background:var(--primary-50);text-decoration:none}
+.d-form-link .ff-ic{color:var(--primary);flex:none}
+.d-form-link .ff-name{font-weight:600;font-size:13.5px;flex:1}
+.d-form-link .ff-dl{color:var(--text-3);font-size:12px}
+.d-related{display:grid;grid-template-columns:1fr 1fr;gap:8px}
+@media(max-width:520px){.d-related{grid-template-columns:1fr}}
+.d-related a{padding:11px 14px;border:1px solid var(--border);border-radius:var(--radius);color:var(--text);font-size:13px;font-weight:500;line-height:1.45;background:#fff;transition:all .12s}
+.d-related a:hover{border-color:var(--primary);background:var(--primary-50);text-decoration:none}
+.d-cta{margin-top:22px;display:flex;gap:10px;flex-wrap:wrap}
+.d-cta a{padding:10px 16px;border-radius:var(--radius);font-size:13.5px;font-weight:600;border:1px solid var(--border-strong);background:#fff;color:var(--text)}
+.d-cta a.btn-primary{background:var(--primary);color:#fff;border-color:var(--primary)}
+.d-cta a.btn-primary:hover{background:var(--primary-700);text-decoration:none}
+.d-cta a:hover{border-color:var(--primary);color:var(--primary-700);text-decoration:none}
+
+/* ── MODAL ── */
+.modal{position:fixed;inset:0;display:none;align-items:center;justify-content:center;z-index:80}
+.modal.show{display:flex;animation:fadeIn .15s}
+@keyframes fadeIn{from{opacity:0}to{opacity:1}}
+.modal .mc{background:#fff;border-radius:var(--radius-xl);width:min(540px,94%);box-shadow:var(--shadow-lg);overflow:hidden;animation:popUp .2s var(--ease)}
+@keyframes popUp{from{opacity:0;transform:scale(.96) translateY(6px)}to{opacity:1;transform:scale(1) translateY(0)}}
+.modal .mh{padding:18px 22px;border-bottom:1px solid var(--border);display:flex;align-items:center;justify-content:space-between}
+.modal .mh h3{font-size:16px;font-weight:700}
+.modal .mh button{border:0;background:transparent;color:var(--text-2);padding:5px;border-radius:6px}
+.modal .mb{padding:22px}
+.modal .step-label{font-size:11.5px;text-transform:uppercase;letter-spacing:.1em;color:var(--primary-700);font-weight:700;margin-bottom:7px}
+.modal h4{font-size:18px;font-weight:800;letter-spacing:-.01em;margin-bottom:14px}
+.modal .opts{display:flex;flex-direction:column;gap:8px}
+.modal .opts button{text-align:left;padding:13px 16px;border:1.5px solid var(--border);background:#fff;border-radius:var(--radius);font-size:14px;font-weight:500;transition:all .12s}
+.modal .opts button:hover{border-color:var(--primary);background:var(--primary-50);color:var(--primary-700)}
+.modal .mf{padding:14px 22px;border-top:1px solid var(--border);display:flex;justify-content:space-between;align-items:center;background:var(--surface-2)}
+.modal .mf button{border:0;background:transparent;color:var(--text-2);font-weight:600;padding:6px 10px;border-radius:6px}
+.modal .mf button:hover{background:#fff;color:var(--text)}
+.modal .m-prog{display:flex;gap:4px}
+.modal .m-prog span{width:22px;height:4px;border-radius:2px;background:var(--border)}
+.modal .m-prog span.on{background:var(--primary)}
+.modal .result-card{padding:18px;background:var(--primary-50);border:1px solid #C8D9FF;border-radius:var(--radius)}
+.modal .result-card .rc-tag{font-size:11px;font-weight:700;color:var(--primary-700);text-transform:uppercase;letter-spacing:.1em;margin-bottom:6px}
+.modal .result-card h5{font-size:15px;font-weight:700;margin-bottom:8px}
+.modal .result-card .rc-ans{color:var(--text-2);font-size:13px;line-height:1.6}
+.modal .result-card a.rc-go{display:inline-block;margin-top:12px;padding:8px 14px;background:var(--primary);color:#fff;border-radius:6px;font-size:13px;font-weight:700}
+
+/* ── TOAST ── */
+.toast{position:fixed;bottom:24px;left:50%;transform:translateX(-50%) translateY(20px);
+  background:var(--navy);color:#fff;padding:11px 18px;border-radius:8px;box-shadow:var(--shadow-lg);
+  font-size:13.5px;font-weight:500;opacity:0;pointer-events:none;transition:all .2s var(--ease);z-index:90;display:flex;gap:10px;align-items:center}
+.toast.show{opacity:1;transform:translateX(-50%) translateY(0)}
+.toast .tic{color:#7BE3B4}
+
+/* ── FOOTER ── */
+footer{background:#fff;border-top:1px solid var(--border);margin-top:12px}
+footer .inner{max-width:1160px;margin:0 auto;padding:32px 24px;display:grid;grid-template-columns:1.6fr 1fr 1fr;gap:28px}
+@media(max-width:760px){footer .inner{grid-template-columns:1fr 1fr}}
+footer h5{font-size:11.5px;text-transform:uppercase;letter-spacing:.08em;color:var(--text-3);font-weight:700;margin-bottom:10px}
+footer ul{list-style:none;display:flex;flex-direction:column;gap:6px}
+footer a{color:var(--text-2);font-size:13.5px}footer a:hover{color:var(--primary)}
+footer .legal{grid-column:1/-1;border-top:1px solid var(--border);padding-top:18px;margin-top:4px;color:var(--text-3);font-size:12px;display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap}
+
+/* ── CONN BAR ── */
+.conn{position:fixed;top:0;left:0;right:0;background:#FFF8E1;color:#7C5E10;padding:8px 16px;font-size:13px;text-align:center;z-index:100;display:none;border-bottom:1px solid #F3DC8C}
+.conn.show{display:block}
+.conn.err{background:#FDE7E1;color:#7C2510;border-color:#F4B0A0}
+
+/* ── SKELETON ── */
+.skel{background:linear-gradient(90deg,#EEF2F7 0%,#F8FAFC 50%,#EEF2F7 100%);background-size:200% 100%;animation:shimmer 1.4s infinite;border-radius:8px}
+@keyframes shimmer{0%{background-position:200% 0}100%{background-position:-200% 0}}
+
+/* ── v3 eklemeleri ── */
+.d-answer .blk+.blk{margin-top:12px}
+.d-answer .ln+.ln{margin-top:3px}
+.d-answer .li{padding-left:16px;text-indent:-11px}
+.d-answer strong{font-weight:700;color:var(--text)}
+.d-answer a{color:var(--primary);text-decoration:underline;word-break:break-all}
+.d-form-link.nolink{cursor:default}
+.d-form-link.nolink:hover{border-color:var(--border);background:#fff}
+.qlist .qrow{display:flex;align-items:center;gap:12px;padding:13px 18px;color:var(--text);font-size:13.5px;font-weight:500}
+.cat-back{background:transparent;border:1px solid var(--border-strong);padding:5px 11px;border-radius:6px;color:var(--text);font-size:12.5px;font-weight:600;cursor:pointer}
+.cat-back:hover{border-color:var(--primary);color:var(--primary-700)}
+.calc-adv{margin:-4px 0 16px;border:1px dashed var(--border-strong);border-radius:var(--radius);padding:10px 12px;background:var(--surface-2)}
+.calc-adv summary{cursor:pointer;font-size:12.5px;font-weight:700;color:var(--primary-700)}
+.calc-adv .adv-grid{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin-top:10px}
+.calc-adv .adv-grid label{font-size:11.5px;font-weight:700;color:var(--text-2);text-transform:uppercase;letter-spacing:.05em;display:block;margin-bottom:5px}
+.calc-adv .adv-grid input{width:100%;padding:8px 10px;border:1.5px solid var(--border-strong);border-radius:6px;font-size:14px}
+.calc-adv .adv-hint{font-size:11.5px;color:var(--text-3);margin-top:8px;line-height:1.5}
+.cr-note-top{font-size:11.5px;color:var(--text-3);margin-bottom:12px;font-weight:600;text-transform:uppercase;letter-spacing:.05em}
+.cr-foot{margin-top:10px;font-size:11.5px;color:var(--text-3);line-height:1.6}
+.cr-warn{margin-top:10px;font-size:12px;color:#7C2510;background:#FDE7E1;border:1px solid #F4B0A0;border-radius:6px;padding:8px 10px}
+.modal .rc-form{margin-top:8px;font-size:12.5px;color:var(--text-2)}
+.modal .mb{max-height:min(70vh,560px);overflow-y:auto}
+button:disabled{opacity:.55;cursor:not-allowed}
+@media(max-width:720px){nav.primary{min-width:0;overflow-x:auto;scrollbar-width:none;-webkit-overflow-scrolling:touch}
+  nav.primary::-webkit-scrollbar{display:none}nav.primary a{padding:7px 8px;font-size:13px;white-space:nowrap}
+  .brand .name small{display:none}.topbar .inner{overflow:hidden;white-space:nowrap}}
+@media print{.topbar,.siteheader,.hero,.stats,#categories,#popular,#calculator,#contact,footer,.scrim,.drawer-head,.d-cta,.toast,.conn{display:none!important}
+  .drawer{position:static;transform:none;box-shadow:none;width:100%;height:auto}.drawer-body{overflow:visible}body{overflow:visible!important}}
+</style>
+</head>
+<body>
+
+<div class="conn" id="conn">Veri yükleniyor…</div>
+
+<!-- TOP BAR -->
+<div class="topbar">
+  <div class="inner">
+    <span>🇹🇷 İstanbul Üniversitesi resmi hizmet sayfasıdır</span>
+    <span class="sep"></span>
+    <a href="https://dsim.istanbul.edu.tr" target="_blank" rel="noopener">dsim.istanbul.edu.tr</a>
+    <span class="sep"></span>
+    <a href="https://dsim.istanbul.edu.tr/tr/content/mevzuat/yonetmelikler" target="_blank" rel="noopener">Mevzuat</a>
+  </div>
+</div>
+
+<!-- HEADER -->
+<header class="siteheader">
+  <div class="inner">
+    <a class="brand" href="#">
+      <div class="crest">İÜ</div>
+      <div class="name">Döner Sermaye İşletmesi<small>Yardım Merkezi · v2.0</small></div>
+    </a>
+    <nav class="primary">
+      <a href="#categories">Kategoriler</a>
+      <a href="#calculator">Hesaplama</a>
+      <a href="#popular">Popüler</a>
+      <a href="#contact">İletişim</a>
+    </nav>
+  </div>
+</header>
+
+<!-- HERO -->
+<section class="hero">
+  <div class="inner">
+    <div class="hero-badge"><span class="dot"></span>Akıllı Yardım Merkezi &middot; Canlı veri</div>
+    <h1>Döner Sermaye işlemlerinizde size nasıl yardımcı olabiliriz?</h1>
+    <p class="lead">Sık sorulan sorular, dağıtım oranı hesaplama ve formlar — hepsi tek yerden, doğal dilde sorgulayabileceğiniz şekilde.</p>
+
+    <div class="search-wrap" id="search" role="search">
+      <div class="search-field">
+        <svg class="ic" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="7"/><path d="m20 20-3.5-3.5"/></svg>
+        <input id="q" type="search" placeholder="Ör: ödeme ne zaman yapılır, dağıtım oranı, doğrudan temin, TİF…" autocomplete="off" aria-label="Sorularda ara" />
+        <button class="clear" id="qclear" title="Temizle" aria-label="Aramayı temizle">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M18 6 6 18M6 6l12 12"/></svg>
+        </button>
+        <span class="kbd" id="kbd">⌘K</span>
+      </div>
+      <div class="results-drop" id="results" role="listbox" aria-label="Arama sonuçları"></div>
+    </div>
+    <div class="chips" id="chips"></div>
+  </div>
+</section>
+
+<!-- STATS -->
+<div class="stats">
+  <div class="inner">
+    <div class="stat"><div><div class="sv" id="stat-faqs">—</div><div class="sl">Soru &amp; Cevap</div></div></div>
+    <div class="stat"><div><div class="sv" id="stat-cats">—</div><div class="sl">Kategori</div></div></div>
+    <div class="stat"><div><div class="sv">4</div><div class="sl">Dağıtım senaryosu</div></div></div>
+  </div>
+</div>
+
+<!-- CATEGORIES -->
+<div id="categories">
+  <div class="wrap" style="padding-top:44px">
+    <div class="sh">
+      <div><h2>Konu kategorileri</h2><p>İşleminizle ilgili alana göz atın.</p></div>
+      <a class="slink" href="#popular">En çok bakılanlar →</a>
+    </div>
+    <div class="cat-grid" id="cats">
+      <div class="cat-card"><div class="skel" style="height:110px"></div></div>
+      <div class="cat-card"><div class="skel" style="height:110px"></div></div>
+      <div class="cat-card"><div class="skel" style="height:110px"></div></div>
+    </div>
+    <div id="cat-questions"></div>
+  </div>
+</div>
+
+<!-- POPULAR + WIZARD -->
+<div id="popular">
+  <div class="wrap">
+    <div class="row2">
+      <div>
+        <div class="sh"><div><h2>En çok bakılan sorular</h2><p>Popüler başlıklar.</p></div></div>
+        <div class="panel">
+          <div class="panel-head"><h3>Popüler sorular</h3><span class="ptag">sık bakılan</span></div>
+          <ul class="qlist" id="popular-list"></ul>
+        </div>
+      </div>
+      <div>
+        <div class="sh"><div><h2>Hızlı yardım</h2><p>Adım adım yönlendirme.</p></div></div>
+        <div class="wizard-card" id="wizard">
+          <div class="wc-tag">İşlem Sihirbazı</div>
+          <h3>Aradığınızı adım adım bulun</h3>
+          <p>İki kısa soruya yanıt verin; konunuzla ilgili en uygun soruları ve formları gösterelim.</p>
+          <button id="open-wizard">Sihirbazı başlat →</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- CALCULATOR -->
+<div id="calculator">
+  <div class="wrap">
+    <div class="sh" style="margin-top:0">
+      <div><h2>Dağıtım Oranı Hesaplama</h2><p>Hizmet bedelinizi girin; yasal kesintileri ve dağıtılabilir tutarı görün.</p></div>
+    </div>
+    <div class="calc-card">
+      <div class="calc-head">
+        <h2>Bireysel Faaliyet Dağıtım Hesaplama</h2>
+        <p>2547 sayılı Kanunun 58. maddesi kapsamında — kanuni asgari oranlarla</p>
+      </div>
+      <div class="calc-body">
+        <div class="calc-left">
+          <div class="form-group">
+            <label for="calc-amount">Hizmet bedeli (TL, KDV hariç)</label>
+            <input type="number" id="calc-amount" placeholder="Örn: 100000" min="0" step="0.01" inputmode="decimal" />
+          </div>
+          <div class="form-group">
+            <label for="calc-type">Birim / faaliyet türü</label>
+            <select id="calc-type"></select>
+          </div>
+          <details class="calc-adv" id="calc-adv">
+            <summary>Oranları düzenle (ÜYK kararı)</summary>
+            <div class="adv-grid">
+              <div><label for="calc-birim">Birim payı %</label><input type="number" id="calc-birim" min="0" max="75" step="0.5" /></div>
+              <div><label for="calc-merkez">Merkez payı %</label><input type="number" id="calc-merkez" min="0" max="50" step="0.5" /></div>
+            </div>
+            <div class="adv-hint">Varsayılanlar kanuni asgari orandır. Üniversite Yönetim Kurulu birim payını %75'e kadar artırabilir; merkez payı yalnızca ÜYK kararıyla uygulanır.</div>
+          </details>
+          <button class="calc-btn" id="calc-btn">Hesapla</button>
+          <p style="margin-top:12px;font-size:12px;color:var(--text-3);line-height:1.6">
+            BAP payı %5 ve Hazine payı %1 sabittir. Sonuçlar bilgilendirme amaçlıdır.
+          </p>
+        </div>
+        <div class="calc-right">
+          <div class="calc-result" id="calc-result">
+            <div class="cr-empty">Tutarı girin ve "Hesapla" butonuna basın.</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- CONTACT -->
+<div id="contact">
+  <div class="wrap">
+    <div class="sh"><div><h2>Hâlâ cevap bulamadıysanız</h2><p>Doğrudan ilgili birime ulaşın.</p></div></div>
+    <div class="contact-grid">
+      <div class="panel">
+        <div class="panel-head"><h3>İletişim kanalları</h3><span class="ptag">resmi</span></div>
+        <ul class="qlist">
+          <li><a href="mailto:isletmemd@istanbul.edu.tr"><span class="qn">✉</span>isletmemd@istanbul.edu.tr<span class="qa" style="margin-left:auto">→</span></a></li>
+          <li><a href="tel:+902124400000"><span class="qn">☎</span>+90 (212) 440 00 00 (Dahili: 26602)<span class="qa" style="margin-left:auto">→</span></a></li>
+          <li><a href="https://www.google.com/maps/search/?api=1&query=%C4%B0skenderpa%C5%9Fa%20Mah.%20Horhor%20Cad.%20Kavalal%C4%B1%20Sok.%20No%3A1/4%20Fatih%20%C4%B0stanbul" target="_blank" rel="noopener"><span class="qn">⛬</span>İskenderpaşa Mah. Horhor Cad. Kavalalı Sok. No:1/4, 34080 Fatih/İstanbul<span class="qa" style="margin-left:auto">↗</span></a></li>
+          <li><div class="qrow"><span class="qn">🖷</span>Faks: +90 (212) 532 93 99</div></li>
+        </ul>
+      </div>
+      <div class="panel">
+        <div class="panel-head"><h3>Çalışma saatleri</h3><span class="ptag">hafta içi</span></div>
+        <ul class="qlist">
+          <li><div class="qrow"><span class="qn" style="width:auto;padding:0 6px;border-radius:4px;font-size:11px">Pzt–Cum</span>09:00 – 17:00</div></li>
+          <li><div class="qrow"><span class="qn" style="width:auto;padding:0 6px;border-radius:4px;font-size:11px">Öğle arası</span>12:30 – 13:30 (kapalı)</div></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- FOOTER -->
+<footer>
+  <div class="inner">
+    <div>
+      <div class="brand" style="margin-bottom:10px">
+        <div class="crest">İÜ</div>
+        <div class="name">Döner Sermaye İşletmesi<small>İstanbul Üniversitesi</small></div>
+      </div>
+      <p style="color:var(--text-3);font-size:12.5px;max-width:280px;line-height:1.6">Üniversite kaynaklarıyla üretilen mal ve hizmetlerin mali sürecini yürüten birim.</p>
+    </div>
+    <div><h5>Konular</h5><ul id="f-topics"></ul></div>
+    <div><h5>Yardım</h5><ul>
+      <li><a href="#contact">İletişim</a></li>
+      <li><a id="f-mevzuat" href="https://dsim.istanbul.edu.tr/tr/content/mevzuat/yonetmelikler" target="_blank" rel="noopener">Mevzuat</a></li>
+      <li><a href="https://dsim.istanbul.edu.tr" target="_blank" rel="noopener">DSİM web sitesi</a></li>
+      <li><a href="https://www.istanbul.edu.tr/tr/content/kisisel-verilerin-korunmasi/kisisel-verilerin-korunmasi" target="_blank" rel="noopener">KVKK</a></li>
+    </ul></div>
+    <div class="legal">
+      <span>© <span id="f-year">2026</span> İstanbul Üniversitesi · Döner Sermaye İşletmesi</span>
+      <span>Bilgilendirme amaçlıdır; bağlayıcı işlem için ilgili mevzuat esastır.</span>
+    </div>
+  </div>
+</footer>
+
+<!-- SCRIM + DRAWER -->
+<div class="scrim" id="scrim"></div>
+<aside class="drawer" id="drawer" role="dialog" aria-modal="true" aria-labelledby="d-title" aria-hidden="true">
+  <div class="drawer-head">
+    <div class="drawer-crumbs">
+      <span class="dc">SSS</span><span>›</span>
+      <span class="dc" id="crumb-cat"></span><span>›</span>
+      <span class="dc dcf" id="crumb-q"></span>
+    </div>
+    <button class="drawer-close" id="dclose" aria-label="Kapat">
+      <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 6 6 18M6 6l12 12"/></svg>
+    </button>
+  </div>
+  <div class="drawer-body">
+    <h2 id="d-title"></h2>
+    <div class="d-meta" id="d-meta"></div>
+    <div class="d-answer" id="d-answer"></div>
+    <div id="d-forms-wrap" style="display:none">
+      <div class="d-section-title">İlgili formlar</div>
+      <div class="d-forms" id="d-forms"></div>
+    </div>
+    <div id="d-related-wrap" style="display:none">
+      <div class="d-section-title">İlgili sorular</div>
+      <div class="d-related" id="d-related"></div>
+    </div>
+    <div class="d-cta">
+      <a href="mailto:isletmemd@istanbul.edu.tr" class="btn-primary" id="d-mail">İlgili birime e-posta gönder</a>
+      <a href="#" id="copy-link">Bağlantıyı kopyala</a>
+      <a href="#" id="d-print">Yazdır</a>
+    </div>
+  </div>
+</aside>
+
+<!-- WIZARD MODAL -->
+<div class="modal" id="wmodal" role="dialog" aria-modal="true" aria-labelledby="wtitle">
+  <div class="mc">
+    <div class="mh"><h3 id="wtitle">İşlem Sihirbazı</h3><button id="wclose" aria-label="Kapat"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 6 6 18M6 6l12 12"/></svg></button></div>
+    <div class="mb" id="wbody"></div>
+    <div class="mf">
+      <button id="wback">‹ Geri</button>
+      <div class="m-prog" id="wprog"><span></span><span></span><span></span></div>
+      <span style="font-size:12px;color:var(--text-3)" id="wstep">Adım 1 / 3</span>
+    </div>
+  </div>
+</div>
+
+<!-- TOAST -->
+<div class="toast" id="toast">
+  <svg class="tic" width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="m5 12 5 5L20 7"/></svg>
+  <span id="toast-msg"></span>
+</div>
+
+<script type="module">
+import { initializeApp } from "https://www.gstatic.com/firebasejs/10.13.0/firebase-app.js";
+import { getFirestore, collection, getDocs } from "https://www.gstatic.com/firebasejs/10.13.0/firebase-firestore.js";
+
+const firebaseConfig = {
+  apiKey: "AIzaSyCjjIcGdMMcXO6rgYh-7n-ss52xzQ9MPkw",
+  authDomain: "yasli-636f1.firebaseapp.com",
+  projectId: "yasli-636f1",
+  storageBucket: "yasli-636f1.firebasestorage.app",
+  messagingSenderId: "565218432829",
+  appId: "1:565218432829:web:2d21749a96697815dad754"
+};
+const app = initializeApp(firebaseConfig);
+const db = getFirestore(app);
+
+/* ══════════════ AYARLAR ══════════════
+   Dağıtım hesaplayıcı varsayılanları (2547 s. Kanun md. 58).
+   • Birim payları kanuni ASGARİ oranlardır; ÜYK %75'e kadar artırabilir (kullanıcı düzenleyebilir).
+   • Merkez payı Kanunda yoktur. İÜ'de ÜYK kararıyla uygulanıyorsa aşağıdaki "merkez" değerini girin. */
+const CALC = {
+  bap: 5,        // 2547/58-b (en az %5)
+  hazine: 1,     // 5234 s. Kanun Geçici md. 1
+  merkez: 0,     // ÜYK kararı (varsa) — örn. 5
+  maxBirim: 75,  // ÜYK'nın artırabileceği üst sınır
+  scenarios: {
+    tip:   { label: "Tıp/Diş Hekimliği Fak., SUAM, açık öğretim", birim: 35, kind: "cd" },
+    lab:   { label: "Ziraat/Veteriner, sivil havacılık, sürekli eğitim, atölye veya laboratuvar bulunan birimler", birim: 30, kind: "cd" },
+    diger: { label: "Diğer birimler / üniversite imkânı kullanılmadan (58-e)", birim: 15, kind: "e" },
+    arge:  { label: "AR-GE / Üniversite-Sanayi İşbirliği (58-k)", birim: 15, kind: "k" }
+  }
+};
+const MEVZUAT_URL = "https://dsim.istanbul.edu.tr/tr/content/mevzuat/yonetmelikler";
+const QUICK_CHIPS = [
+  { t: "Ödeme ne zaman yapılır?", q: "ödeme ne zaman" },
+  { t: "Dağıtım oranları",        q: "dağıtım oranı" },
+  { t: "Vergi yükümlülükleri",    q: "vergi beyanname" },
+  { t: "Doğrudan temin",          q: "doğrudan temin" },
+  { t: "Taşınır / TİF",           q: "taşınır TİF" },
+  { t: "Sayıştay denetimi",       q: "sayıştay denetim" }
+];
+
+let CATEGORIES = [];
+let FAQS = [];
+
+const ICONS = {
+  compass: '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><polygon points="16,8 14,14 8,16 10,10" fill="currentColor" stroke="none"/></svg>',
+  shield:  '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3 4 6v6c0 5 3.5 8.5 8 9 4.5-.5 8-4 8-9V6l-8-3z"/><path d="m9 12 2 2 4-4"/></svg>',
+  wallet:  '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="6" width="18" height="14" rx="2"/><path d="M3 10h18"/><circle cx="16" cy="15" r="1.2" fill="currentColor"/></svg>',
+  clipboard:'<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="6" y="4" width="12" height="17" rx="2"/><rect x="9" y="2" width="6" height="4" rx="1"/><path d="M9 11h6M9 15h6"/></svg>',
+  beaker:  '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M9 3v6L4 19a2 2 0 0 0 2 3h12a2 2 0 0 0 2-3l-5-10V3"/><path d="M8 3h8"/><path d="M7 14h10"/></svg>',
+  users:   '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="9" cy="8" r="3.5"/><path d="M3 20c1-3 3.5-5 6-5s5 2 6 5"/><circle cx="17" cy="9" r="2.5"/></svg>',
+  atom:    '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"><circle cx="12" cy="12" r="2" fill="currentColor"/><ellipse cx="12" cy="12" rx="9" ry="3.5"/><ellipse cx="12" cy="12" rx="9" ry="3.5" transform="rotate(60 12 12)"/><ellipse cx="12" cy="12" rx="9" ry="3.5" transform="rotate(120 12 12)"/></svg>',
+  book:    '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h7a3 3 0 0 1 3 3v14H7a3 3 0 0 1-3-3V4z"/><path d="M20 4h-7a3 3 0 0 0-3 3v14h7a3 3 0 0 0 3-3V4z"/></svg>',
+  coins:   '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"><ellipse cx="9" cy="8" rx="6" ry="3"/><path d="M3 8v4c0 1.7 2.7 3 6 3s6-1.3 6-3V8"/><ellipse cx="15" cy="15" rx="6" ry="3"/><path d="M9 15v4c0 1.7 2.7 3 6 3s6-1.3 6-3v-4"/></svg>',
+  audit:   '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="4" y="3" width="12" height="17" rx="2"/><path d="M8 8h4M8 12h3"/><circle cx="16" cy="15" r="3.5"/><path d="m18.5 17.5 2.5 2.5"/></svg>',
+  box:     '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M3 7.5 12 3l9 4.5v9L12 21l-9-4.5z"/><path d="M3 7.5 12 12l9-4.5M12 12v9"/></svg>'
+};
+const FORM_IC = '<svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M14 3H6a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V9z"/><path d="M14 3v6h6M9 14h6M9 17h6"/></svg>';
+
+/* ══════════════ YARDIMCILAR ══════════════ */
+const $  = s => document.querySelector(s);
+const $$ = s => [...document.querySelectorAll(s)];
+const byId = id => FAQS.find(f => f.id === id);
+const catById = id => CATEGORIES.find(c => c.id === id);
+const esc = s => String(s ?? "").replace(/[&<>"']/g, c => ({ "&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#39;" }[c]));
+const safeColor = c => /^#[0-9a-fA-F]{3,8}$/.test(c || "") ? c : "#475569";
+const natKey = s => String(s).toLocaleLowerCase("tr-TR").replace(/\d+/g, n => n.padStart(6, "0"));
+const byNat = (a, b) => natKey(a.id).localeCompare(natKey(b.id));
+const normForms = fs => (fs || []).map(f => typeof f === "string" ? { name: f, url: "" } : { name: f.name || "", url: f.url || "" }).filter(f => f.name);
+const IS_MAC = /Mac|iPhone|iPad/i.test(navigator.platform || navigator.userAgent);
+const KBD = IS_MAC ? "⌘K" : "Ctrl K";
+
+/* Türkçe katlama: "Ödeme" → "odeme". Karakter eşlemesi tutulur ki vurgulama orijinal metinde yapılabilsin. */
+const FOLD = { "ç":"c","ğ":"g","ı":"i","ö":"o","ş":"s","ü":"u","â":"a","î":"i","û":"u" };
+function foldWithMap(text) {
+  let s = "", map = [];
+  const t = String(text || "");
+  for (let i = 0; i < t.length; i++) {
+    const low = t[i].toLocaleLowerCase("tr-TR");
+    for (const c of low) {
+      if (/[̀-ͯ]/.test(c)) continue;
+      s += FOLD[c] || c; map.push(i);
+    }
+  }
+  return { s, map };
+}
+const fold = t => foldWithMap(t).s;
+const normText = t => " " + fold(t).replace(/[^a-z0-9]+/g, " ").trim() + " ";
+const STOP = new Set(["ne","nedir","nelerdir","nasil","mi","mu","midir","mudur","ve","ile","bir","bu","icin","hangi","hangileri","olan","olarak","da","de","ki","gibi","veya","ya","kim","kimdir","kimler","nereye","nereden","yapilir","nasildir"]);
+function queryTokens(q) {
+  const all = fold(q).replace(/[^a-z0-9]+/g, " ").trim().split(" ").filter(Boolean);
+  const keep = all.filter(t => !STOP.has(t) && t.length > 1);
+  return keep.length ? keep : all;
+}
+const stemOf = t => t.length >= 6 ? t.slice(0, Math.max(5, t.length - 2)) : t;   // Türkçe ek toleransı
+
+/* ══════════════ CEVAP BİÇİMLENDİRME ══════════════ */
+function linkify(escaped) {
+  return escaped.replace(/https?:\/\/[^\s<]+/g, m => {
+    const url = m.replace(/[.,;:)]+$/, ""), tail = m.slice(url.length);
+    return `<a href="${url}" target="_blank" rel="noopener">${url}</a>${tail}`;
+  });
+}
+function fmtLine(line) {
+  let h = linkify(esc(line));
+  const isHead = /^(\d+\.|[①-⑳])\s/.test(line) && line.length < 95 && !/[.:]$/.test(line.trim());
+  if (isHead) return `<strong>${h}</strong>`;
+  const m = line.match(/^([^:]{2,72}?):(\s|$)/);
+  if (m && !/https?/.test(m[1]) && m[1].trim().split(/\s+/).length <= 9) {
+    const lbl = linkify(esc(m[1] + ":"));
+    h = `<strong>${lbl}</strong>` + linkify(esc(line.slice(m[1].length + 1)));
+  }
+  return h;
+}
+function renderAnswer(text) {
+  const blocks = String(text || "").replace(/\r/g, "").split(/\n\s*\n/);
+  return blocks.map(b => {
+    const lines = b.split("\n").filter(l => l.trim() !== "");
+    return `<div class="blk">${lines.map(l => `<div class="ln${/^\s*[•\-–]\s/.test(l) ? " li" : ""}">${fmtLine(l.trim())}</div>`).join("")}</div>`;
+  }).join("");
+}
+
+/* ══════════════ VERİ ══════════════ */
+async function loadData() {
+  const conn = $("#conn");
+  conn.classList.add("show"); conn.textContent = "Veri yükleniyor…";
+  try {
+    const [cs, fs] = await Promise.all([getDocs(collection(db, "categories")), getDocs(collection(db, "faqs"))]);
+    let cats = cs.docs.map(d => ({ id: d.id, ...d.data() }));
+    let faqs = fs.docs.map(d => ({ id: d.id, ...d.data() }));
+    // Gizli kategori ve sorular public sayfada hiç görünmez, aramada çıkmaz.
+    const hiddenCats = new Set(cats.filter(c => c.hidden).map(c => c.id));
+    cats = cats.filter(c => !c.hidden).sort((a, b) => (a.order ?? 999) - (b.order ?? 999) || byNat(a, b));
+    faqs = faqs.filter(f => !f.hidden && !hiddenCats.has(f.cat) && cats.some(c => c.id === f.cat)).sort(byNat);
+    CATEGORIES = cats; FAQS = faqs;
+    for (const f of FAQS) {
+      f._q = normText(f.q); f._k = normText((f.keywords || []).join(" "));
+      f._a = normText(f.a); f._c = normText(catById(f.cat)?.name || "");
+    }
+    if (!CATEGORIES.length || !FAQS.length) {
+      conn.classList.add("err"); conn.textContent = "Şu anda gösterilecek içerik bulunmuyor.";
+      return false;
+    }
+    conn.classList.remove("show");
+    return true;
+  } catch (e) {
+    console.error(e);
+    conn.classList.add("show", "err");
+    conn.textContent = "Veriler şu anda yüklenemiyor. Lütfen bir süre sonra tekrar deneyin.";
+    return false;
+  }
+}
+
+/* ══════════════ KATEGORİLER ══════════════ */
+function renderCats() {
+  const counts = FAQS.reduce((m, f) => (m[f.cat] = (m[f.cat] || 0) + 1, m), {});
+  $("#stat-faqs").textContent = FAQS.length;
+  $("#stat-cats").textContent = CATEGORIES.length;
+  $("#cats").innerHTML = CATEGORIES.map(c => `
+    <a class="cat-card" href="#" data-cat="${esc(c.id)}">
+      <div class="cc-top">
+        <span class="cc-ico" style="background:${safeColor(c.color)}">${ICONS[c.icon] || ICONS.compass}</span>
+        <span class="cc-cnt">${counts[c.id] || 0} soru</span>
+      </div>
+      <h3>${esc(c.name)}</h3>
+      <p>${esc(c.desc || "")}</p>
+      <span class="cc-arr">İncele →</span>
+    </a>`).join("");
+  $$(".cat-card[data-cat]").forEach(el => el.addEventListener("click", e => { e.preventDefault(); showCategoryQuestions(el.dataset.cat); }));
+}
+
+function showCategoryQuestions(catId) {
+  const cat = catById(catId);
+  if (!cat) return;
+  const list = FAQS.filter(f => f.cat === catId);
+  const target = $("#cat-questions");
+  target.innerHTML = `
+    <div class="panel" style="margin-top:14px">
+      <div class="panel-head">
+        <h3 style="display:flex;align-items:center;gap:10px">
+          <span style="display:inline-block;width:10px;height:10px;border-radius:3px;background:${safeColor(cat.color)};flex:none"></span>
+          ${esc(cat.name)}
+          <span style="color:var(--text-3);font-weight:500;font-size:13px">· ${list.length} soru</span>
+        </h3>
+        <button id="cat-back" class="cat-back">← Tüm kategoriler</button>
+      </div>
+      <ul class="qlist">
+        ${list.map((f, i) => `<li><a href="#q-${esc(f.id)}" data-qid="${esc(f.id)}"><span class="qn">${i + 1}</span>${esc(f.q)}<span class="qa" style="margin-left:auto">→</span></a></li>`).join("")}
+      </ul>
+    </div>`;
+  target.style.display = "block";
+  target.querySelectorAll("[data-qid]").forEach(a => a.addEventListener("click", e => { e.preventDefault(); openQ(a.dataset.qid); }));
+  $("#cat-back").addEventListener("click", () => {
+    target.style.display = "none"; target.innerHTML = "";
+    $("#categories").scrollIntoView({ behavior: "smooth", block: "start" });
+  });
+  $("#results").classList.remove("open");
+  target.scrollIntoView({ behavior: "smooth", block: "start" });
+}
+
+/* ══════════════ POPÜLER ══════════════ */
+function renderPopular() {
+  const order = id => CATEGORIES.findIndex(c => c.id === id);
+  let pop = FAQS.filter(f => f.featured).sort((a, b) => order(a.cat) - order(b.cat) || byNat(a, b));
+  if (pop.length < 4) pop = [...pop, ...FAQS.filter(f => !f.featured)].slice(0, 8);
+  pop = pop.slice(0, 8);
+  $("#popular-list").innerHTML = pop.map((f, i) =>
+    `<li><a href="#q-${esc(f.id)}" data-qid="${esc(f.id)}"><span class="qn">${i + 1}</span>${esc(f.q)}<span class="qa" style="margin-left:auto">→</span></a></li>`).join("");
+  $$("#popular-list a").forEach(a => a.addEventListener("click", e => { e.preventDefault(); openQ(a.dataset.qid); }));
+}
+
+/* ══════════════ HIZLI ARAMA ÇİPLERİ ══════════════ */
+function renderChips() {
+  const chips = FAQS.length ? QUICK_CHIPS.filter(c => search(c.q).length) : QUICK_CHIPS;
+  $("#chips").innerHTML = chips.map(c => `
+    <button class="chip" data-q="${esc(c.q)}">
+      <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="7"/><path d="m20 20-3.5-3.5"/></svg>
+      ${esc(c.t)}
+    </button>`).join("");
+  $$(".chip").forEach(b => b.addEventListener("click", () => {
+    $("#q").value = b.dataset.q;
+    $("#q").dispatchEvent(new Event("input"));
+    $("#q").focus();
+  }));
+}
+
+/* ══════════════ ARAMA ══════════════ */
+function countWord(hay, stem) {
+  let n = 0, i = 0; const needle = " " + stem;
+  while ((i = hay.indexOf(needle, i)) !== -1) { n++; i += needle.length; }
+  return n;
+}
+function score(f, ts) {
+  let s = 0, hit = 0;
+  for (const t of ts) {
+    const st = stemOf(t);
+    const q = countWord(f._q, st), k = countWord(f._k, st), a = countWord(f._a, st), c = countWord(f._c, st);
+    if (q || k || a || c) hit++;
+    s += q * 8 + k * 6 + Math.min(a, 6) * 1.5 + c * 2;
+  }
+  if (!hit) return 0;
+  s *= Math.pow(hit / ts.length, 2);
+  if (ts.length > 1 && f._q.includes(" " + ts.join(" "))) s += 12;
+  return s;
+}
+function search(q) {
+  const ts = queryTokens(q);
+  if (!ts.length) return [];
+  return FAQS.map(f => ({ f, s: score(f, ts) })).filter(x => x.s > 0.5).sort((a, b) => b.s - a.s).slice(0, 8).map(x => x.f);
+}
+const SYNONYMS = [["param","ödeme"],["maaş","ödeme"],["hakediş","ödeme"],["fatura","tahakkuk"],["stopaj","vergi"],["arge","ar-ge"],["danışman","danışmanlık"],["evrak","form"],["belge","form"],["demirbaş","taşınır"],["ihale","satın alma"]];
+function suggest(q) {
+  const lower = fold(q);
+  for (const [bad, good] of SYNONYMS) if (lower.includes(fold(bad)) && !lower.includes(fold(good))) return good;
+  return null;
+}
+/* Katlanmış metinde kelime-başı eşleşmelerini bulup orijinal metinde <mark> ile vurgular (HTML güvenli). */
+function highlightRanges(text, ts) {
+  const { s, map } = foldWithMap(text);
+  const ranges = [];
+  for (const t of ts) {
+    const st = stemOf(t); if (st.length < 2) continue;
+    let i = 0;
+    while ((i = s.indexOf(st, i)) !== -1) {
+      if (i === 0 || !/[a-z0-9]/.test(s[i - 1])) {
+        let j = i + st.length; while (j < s.length && /[a-z0-9]/.test(s[j])) j++;
+        ranges.push([map[i], map[j - 1] + 1]);
+        i = j;
+      } else i++;
+    }
+  }
+  ranges.sort((a, b) => a[0] - b[0]);
+  const merged = [];
+  for (const r of ranges) { const l = merged[merged.length - 1]; if (l && r[0] <= l[1]) l[1] = Math.max(l[1], r[1]); else merged.push([...r]); }
+  return merged;
+}
+function highlight(text, ts, from = 0, to = String(text || "").length) {
+  text = String(text || "");
+  const rs = highlightRanges(text, ts).filter(r => r[1] > from && r[0] < to);
+  let out = "", pos = from;
+  for (const [a, b] of rs) { const A = Math.max(a, from), B = Math.min(b, to); out += esc(text.slice(pos, A)) + "<mark>" + esc(text.slice(A, B)) + "</mark>"; pos = B; }
+  return out + esc(text.slice(pos, to));
+}
+function snippet(text, ts) {
+  const flat = String(text || "").replace(/\s*\n+\s*/g, " ");
+  const rs = highlightRanges(flat, ts);
+  if (!rs.length) return esc(flat.slice(0, 170)) + (flat.length > 170 ? "…" : "");
+  const start = Math.max(0, rs[0][0] - 60), end = Math.min(flat.length, start + 180);
+  return (start > 0 ? "…" : "") + highlight(flat, ts, start, end) + (end < flat.length ? "…" : "");
+}
+function renderResults(list, qStr) {
+  const r = $("#results");
+  if (!list.length) {
+    const sug = suggest(qStr);
+    r.innerHTML = `${sug ? `<div class="rd-dym">Bunu mu demek istediniz? <button id="dym">${esc(sug)}</button></div>` : ""}
+      <div class="rd-empty"><strong>Sonuç bulunamadı</strong>“${esc(qStr)}” için eşleşme yok. Farklı bir kelime deneyin veya kategorilere göz atın.</div>`;
+    r.classList.add("open");
+    if (sug) $("#dym").addEventListener("click", () => { $("#q").value = sug; $("#q").dispatchEvent(new Event("input")); });
+    return;
+  }
+  const ts = queryTokens(qStr);
+  r.innerHTML = `<div class="rd-header">${list.length} sonuç bulundu</div>
+  ${list.map(f => {
+    const c = catById(f.cat) || { name: "Diğer", color: "#475569" };
+    return `<div class="rd-item" data-qid="${esc(f.id)}" tabindex="0" role="option">
+      <div style="flex:1;min-width:0">
+        <div class="rd-cat" style="color:${safeColor(c.color)}">${esc(c.name)}</div>
+        <div class="rd-q">${highlight(f.q, ts)}</div>
+        <div class="rd-a">${snippet(f.a, ts)}</div>
+      </div>
+      <svg class="rd-arr" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 5l7 7-7 7"/></svg>
+    </div>`;
+  }).join("")}`;
+  r.classList.add("open");
+  $$("#results .rd-item").forEach(el => {
+    el.addEventListener("click", () => openQ(el.dataset.qid));
+    el.addEventListener("keydown", e => { if (e.key === "Enter") openQ(el.dataset.qid); });
+  });
+}
+let activeIdx = -1, searchTO;
+function setupSearch() {
+  const inp = $("#q"), wrap = $("#search"), res = $("#results");
+  $("#kbd").textContent = KBD;
+  inp.addEventListener("input", e => {
+    const v = e.target.value;
+    wrap.classList.toggle("has-val", !!v);
+    clearTimeout(searchTO);
+    if (!v.trim()) { res.classList.remove("open"); return; }
+    searchTO = setTimeout(() => { renderResults(search(v), v); activeIdx = -1; }, 80);
+  });
+  inp.addEventListener("focus", () => { if (inp.value.trim()) renderResults(search(inp.value), inp.value); });
+  inp.addEventListener("keydown", e => {
+    const items = $$("#results .rd-item");
+    if (e.key === "ArrowDown") { e.preventDefault(); activeIdx = Math.min(activeIdx + 1, items.length - 1); updateActive(items); }
+    else if (e.key === "ArrowUp") { e.preventDefault(); activeIdx = Math.max(activeIdx - 1, 0); updateActive(items); }
+    else if (e.key === "Enter") { e.preventDefault(); const it = items[activeIdx >= 0 ? activeIdx : 0]; if (it) openQ(it.dataset.qid); }
+    else if (e.key === "Escape") { res.classList.remove("open"); inp.blur(); }
+  });
+  $("#qclear").addEventListener("click", () => { inp.value = ""; wrap.classList.remove("has-val"); res.classList.remove("open"); inp.focus(); });
+  document.addEventListener("click", e => { if (!wrap.contains(e.target)) res.classList.remove("open"); });
+  document.addEventListener("keydown", e => { if ((e.metaKey || e.ctrlKey) && e.key.toLowerCase() === "k") { e.preventDefault(); inp.focus(); inp.select(); } });
+}
+function updateActive(items) {
+  items.forEach((el, i) => el.classList.toggle("active", i === activeIdx));
+  if (items[activeIdx]) items[activeIdx].scrollIntoView({ block: "nearest" });
+}
+
+/* ══════════════ SORU PANELİ ══════════════ */
+let lastFocus = null;
+function openQ(qid) {
+  const f = byId(qid); if (!f) return;
+  const c = catById(f.cat) || { name: "Diğer", color: "#475569" };
+  if (!$("#drawer").classList.contains("open")) lastFocus = document.activeElement;
+  $("#d-title").textContent = f.q;
+  $("#crumb-cat").textContent = c.name;
+  $("#crumb-q").textContent = f.q.length > 50 ? f.q.slice(0, 50) + "…" : f.q;
+  const upd = f.updated_at?.toDate ? f.updated_at.toDate().toLocaleDateString("tr-TR", { day: "numeric", month: "short", year: "numeric" }) : null;
+  $("#d-meta").innerHTML = `<span class="d-pill dp-cat">●&nbsp;${esc(c.name)}</span>${upd ? `<span class="d-pill">Güncellendi: ${esc(upd)}</span>` : ""}`;
+  $("#d-answer").innerHTML = renderAnswer(f.a);
+
+  const forms = normForms(f.forms);
+  const fw = $("#d-forms-wrap"), fb = $("#d-forms");
+  if (forms.length) {
+    fw.style.display = "block";
+    fb.innerHTML = forms.map(fn => fn.url
+      ? `<a href="${esc(fn.url)}" target="_blank" rel="noopener" class="d-form-link"><span class="ff-ic">${FORM_IC}</span><span class="ff-name">${esc(fn.name)}</span><span class="ff-dl">aç ↗</span></a>`
+      : `<div class="d-form-link nolink"><span class="ff-ic">${FORM_IC}</span><span class="ff-name">${esc(fn.name)}</span><span class="ff-dl">ilgili birimden temin edilir</span></div>`).join("");
+  } else fw.style.display = "none";
+
+  const rel = (f.related || []).map(byId).filter(Boolean);
+  const rw = $("#d-related-wrap"), rb = $("#d-related");
+  if (rel.length) {
+    rw.style.display = "block";
+    rb.innerHTML = rel.map(r => `<a href="#q-${esc(r.id)}" data-rid="${esc(r.id)}">${esc(r.q)}</a>`).join("");
+    rb.querySelectorAll("a").forEach(a => a.addEventListener("click", e => { e.preventDefault(); openQ(a.dataset.rid); }));
+  } else rw.style.display = "none";
+
+  const subj = encodeURIComponent("SSS: " + f.q);
+  $("#d-mail").href = `mailto:isletmemd@istanbul.edu.tr?subject=${subj}`;
+  $("#scrim").classList.add("show");
+  $("#drawer").classList.add("open");
+  $("#drawer").setAttribute("aria-hidden", "false");
+  $(".drawer-body").scrollTop = 0;
+  document.body.style.overflow = "hidden";
+  history.replaceState(null, "", location.pathname + location.search + "#q-" + encodeURIComponent(f.id));
+  setTimeout(() => $("#dclose").focus(), 50);
+}
+function closeDrawer() {
+  $("#scrim").classList.remove("show");
+  $("#drawer").classList.remove("open");
+  $("#drawer").setAttribute("aria-hidden", "true");
+  document.body.style.overflow = "";
+  // Önemli: barındırma adresindeki sorgu parametresi (ör. ?f=sss.html) korunur.
+  history.replaceState(null, "", location.pathname + location.search);
+  if (lastFocus && lastFocus.focus) lastFocus.focus();
+}
+
+/* ══════════════ DAĞITIM HESAPLAMA ══════════════ */
+const fmtTL = n => n.toLocaleString("tr-TR", { minimumFractionDigits: 2, maximumFractionDigits: 2 }) + " TL";
+function setupCalc() {
+  const sel = $("#calc-type");
+  sel.innerHTML = Object.entries(CALC.scenarios).map(([k, s]) => `<option value="${k}"${k === "diger" ? " selected" : ""}>${esc(s.label)}</option>`).join("");
+  const syncRates = () => {
+    const sc = CALC.scenarios[sel.value];
+    $("#calc-birim").value = sc.birim; $("#calc-birim").min = sc.kind === "k" ? 15 : sc.birim;
+    $("#calc-merkez").value = CALC.merkez;
+    $("#calc-adv").style.display = sc.kind === "k" ? "none" : "";
+  };
+  sel.addEventListener("change", () => { syncRates(); if ($("#calc-amount").value) runCalc(); });
+  syncRates();
+  $("#calc-btn").addEventListener("click", runCalc);
+  $("#calc-amount").addEventListener("keydown", e => { if (e.key === "Enter") runCalc(); });
+  ["#calc-birim", "#calc-merkez"].forEach(s => $(s).addEventListener("change", () => { if ($("#calc-amount").value) runCalc(); }));
+}
+function runCalc() {
+  const amount = parseFloat(String($("#calc-amount").value).replace(",", "."));
+  const type = $("#calc-type").value, sc = CALC.scenarios[type];
+  const el = $("#calc-result");
+  if (!amount || amount <= 0) { el.innerHTML = '<div class="cr-empty">Geçerli bir tutar girin.</div>'; return; }
+  const row = (l, v, cls = "") => `<div class="cr-row ${cls}"><span class="cr-label">${l}</span><span class="cr-val">${fmtTL(v)}</span></div>`;
+
+  if (sc.kind === "k") {
+    el.innerHTML = `
+      <div class="cr-note-top">${esc(sc.label)} — Kesinti yapılmaz</div>
+      ${row("(b) fıkrası işleri / birim (%15)", amount * .15)}
+      ${row("Öğretim elemanı — NET (%85)", amount * .85, "cr-highlight")}
+      <div class="cr-total"><span class="ct-label">Toplam hizmet bedeli</span><span class="ct-val">${fmtTL(amount)}</span></div>
+      <p class="cr-foot">2547/58-k: BAP ve Hazine payı dahil hiçbir kesinti yapılmaz. %85 herhangi bir vergi kesintisi yapılmaksızın ödenir; ücret bordrosu düzenlenir ve tutar gelir vergisi matrahına eklenmez. Proje, Üniversite Yönetim Kurulu kararıyla bu kapsama alınmış olmalıdır.</p>`;
+    return;
+  }
+  let birim = parseFloat($("#calc-birim").value), merkez = parseFloat($("#calc-merkez").value) || 0;
+  const warn = [];
+  if (!(birim >= 0)) birim = sc.birim;
+  if (birim < sc.birim) warn.push(`Bu grup için kanuni asgari birim payı %${sc.birim}'dir.`);
+  if (birim > CALC.maxBirim) { warn.push(`Üniversite Yönetim Kurulu birim payını en fazla %${CALC.maxBirim}'e kadar artırabilir.`); birim = CALC.maxBirim; }
+  const total = birim + CALC.bap + CALC.hazine + merkez;
+  if (total >= 100) { el.innerHTML = '<div class="cr-empty">Oranların toplamı %100\'ü aşamaz.</div>'; return; }
+  const kalan = 100 - total;
+  const kalanLbl = sc.kind === "e" ? "Öğretim elemanına kalan (brüt)" : "Dağıtılabilir tutar (brüt)";
+  el.innerHTML = `
+    <div class="cr-note-top">${esc(sc.label)}</div>
+    ${row(`Birim payı (%${birim})`, amount * birim / 100)}
+    ${row(`BAP payı (%${CALC.bap})`, amount * CALC.bap / 100)}
+    ${row(`Hazine payı (%${CALC.hazine})`, amount * CALC.hazine / 100)}
+    ${merkez ? row(`Merkez payı — ÜYK kararı (%${merkez})`, amount * merkez / 100) : ""}
+    ${row(`${kalanLbl} (%${+kalan.toFixed(2)})`, amount * kalan / 100, "cr-highlight")}
+    <div class="cr-total"><span class="ct-label">Toplam hizmet bedeli (KDV hariç)</span><span class="ct-val">${fmtTL(amount)}</span></div>
+    ${warn.length ? `<p class="cr-warn">${warn.map(esc).join(" ")}</p>` : ""}
+    <p class="cr-foot">${sc.kind === "e"
+      ? "2547/58-e: Varsa hizmetle bağlantılı giderler de düşülür; kalan tutar tahsilatı izleyen bir ay içinde ödenir. Gelir vergisi stopajı ve damga vergisi ayrıca kesilir."
+      : "Bu birimlerde ek ödeme, 2547/58-c'deki ek ödeme matrahına bağlı tavanlar ve performans esaslarına göre dağıtılır; gösterilen tutar dağıtılabilir havuzdur."}
+      Sonuçlar bilgilendirme amaçlıdır; kesin tutar için Döner Sermaye İşletme Müdürlüğüne danışınız.</p>`;
+}
+
+/* ══════════════ İŞLEM SİHİRBAZI ══════════════ */
+const PHASES = [
+  { k: "info",    t: "Genel bilgi — nedir, kimdir?",          re: /nedir|nelerdir|kimdir|kimler|kavram|tanim/ },
+  { k: "process", t: "Süreç ve adımlar — nasıl yapılır?",      re: /nasil|surec|basamak|adim|isler|yurut|yapil/ },
+  { k: "payment", t: "Ödeme, tahsilat ve dağıtım",             re: /odeme|tahsil|ucret|bedel|pay|dagitim|zaman|kesinti/ },
+  { k: "forms",   t: "Form, belge ve kayıt",                   re: /form|belge|fis|tif|kayit|rapor/ },
+  { k: "law",     t: "Mevzuat, yetki ve sorumluluklar",        re: /mevzuat|kanun|yonetmelik|sorumlu|yetki|vergi|denetim/ }
+];
+const WIZ = { step: 0, cat: null, phase: null };
+function openWizard() { WIZ.step = 0; WIZ.cat = null; WIZ.phase = null; $("#wmodal").classList.add("show"); renderWizard(); setTimeout(() => $("#wbody button")?.focus(), 60); }
+function closeWizard() { $("#wmodal").classList.remove("show"); }
+function wizardPicks() {
+  const ph = PHASES.find(p => p.k === WIZ.phase);
+  const list = FAQS.filter(f => f.cat === WIZ.cat);
+  const sc = f => (ph.re.test(fold(f.q)) ? 5 : 0) + (ph.re.test(fold((f.keywords || []).join(" "))) ? 2 : 0)
+                + (WIZ.phase === "forms" && normForms(f.forms).length ? 4 : 0) + (f.featured ? 1 : 0);
+  return list.map(f => ({ f, s: sc(f) })).sort((a, b) => b.s - a.s || byNat(a.f, b.f)).slice(0, 3).map(x => x.f);
+}
+function renderWizard() {
+  $("#wstep").textContent = `Adım ${WIZ.step + 1} / 3`;
+  $$("#wprog span").forEach((s, i) => s.classList.toggle("on", i <= WIZ.step));
+  $("#wback").style.visibility = WIZ.step > 0 ? "visible" : "hidden";
+  const body = $("#wbody");
+  if (WIZ.step === 0) {
+    body.innerHTML = `<div class="step-label">Adım 1</div><h4>Hangi konuda işlem yapıyorsunuz?</h4>
+      <div class="opts">${CATEGORIES.map(c => `<button data-cat="${esc(c.id)}">${esc(c.name)}</button>`).join("")}</div>`;
+    body.querySelectorAll("[data-cat]").forEach(b => b.addEventListener("click", () => { WIZ.cat = b.dataset.cat; WIZ.step = 1; renderWizard(); }));
+  } else if (WIZ.step === 1) {
+    body.innerHTML = `<div class="step-label">Adım 2</div><h4>Ne öğrenmek istiyorsunuz?</h4>
+      <div class="opts">${PHASES.map(p => `<button data-ph="${p.k}">${esc(p.t)}</button>`).join("")}</div>`;
+    body.querySelectorAll("[data-ph]").forEach(b => b.addEventListener("click", () => { WIZ.phase = b.dataset.ph; WIZ.step = 2; renderWizard(); }));
+  } else {
+    const picks = wizardPicks();
+    if (!picks.length) { body.innerHTML = `<div class="result-card"><h5>İlgili kayıt bulunamadı</h5><p>Sayfanın altındaki iletişim kanallarından bize ulaşabilirsiniz.</p></div>`; return; }
+    body.innerHTML = `<div class="step-label">Önerilerimiz</div><h4>${esc(catById(WIZ.cat)?.name || "")}</h4>
+      ${picks.map((f, i) => `
+        <div class="result-card" style="margin-top:${i ? 10 : 0}px">
+          <h5>${esc(f.q)}</h5>
+          <div class="rc-ans">${esc(String(f.a || "").replace(/\s*\n+\s*/g, " ").slice(0, 170))}…</div>
+          ${normForms(f.forms).length ? `<div class="rc-form"><strong>İlgili form:</strong> ${esc(normForms(f.forms)[0].name)}</div>` : ""}
+          <a href="#q-${esc(f.id)}" class="rc-go" data-go="${esc(f.id)}">Tam yanıtı oku →</a>
+        </div>`).join("")}`;
+    body.querySelectorAll("[data-go]").forEach(a => a.addEventListener("click", e => { e.preventDefault(); closeWizard(); openQ(a.dataset.go); }));
+  }
+}
+
+/* ══════════════ ALT BİLGİ ══════════════ */
+function renderFooter() {
+  $("#f-topics").innerHTML = CATEGORIES.slice(0, 6).map(c => `<li><a href="#categories" data-fcat="${esc(c.id)}">${esc(c.name)}</a></li>`).join("");
+  $$("[data-fcat]").forEach(a => a.addEventListener("click", e => { e.preventDefault(); showCategoryQuestions(a.dataset.fcat); }));
+}
+
+/* ══════════════ TOAST ══════════════ */
+let toastTO;
+function toast(msg) {
+  $("#toast-msg").textContent = msg;
+  $("#toast").classList.add("show");
+  clearTimeout(toastTO); toastTO = setTimeout(() => $("#toast").classList.remove("show"), 2600);
+}
+
+/* ══════════════ OLAYLAR ══════════════ */
+function setupDrawerEvents() {
+  $("#dclose").addEventListener("click", closeDrawer);
+  $("#scrim").addEventListener("click", closeDrawer);
+  document.addEventListener("keydown", e => {
+    if (e.key !== "Escape") return;
+    if ($("#wmodal").classList.contains("show")) closeWizard();
+    else if ($("#drawer").classList.contains("open")) closeDrawer();
+  });
+  $("#copy-link").addEventListener("click", async e => {
+    e.preventDefault();
+    try { await navigator.clipboard.writeText(location.href); toast("Bağlantı panoya kopyalandı."); }
+    catch { toast("Bağlantı kopyalanamadı; adres çubuğundan kopyalayabilirsiniz."); }
+  });
+  $("#d-print").addEventListener("click", e => { e.preventDefault(); window.print(); });
+}
+function setupWizardEvents() {
+  $("#open-wizard").addEventListener("click", openWizard);
+  $("#wclose").addEventListener("click", closeWizard);
+  $("#wback").addEventListener("click", () => { if (WIZ.step > 0) { WIZ.step--; renderWizard(); } });
+  $("#wmodal").addEventListener("click", e => { if (e.target.id === "wmodal") closeWizard(); });
+}
+function checkHash() {
+  const h = decodeURIComponent(location.hash || "");
+  if (h.startsWith("#q-")) { const id = h.slice(3); if (byId(id)) setTimeout(() => openQ(id), 150); }
+}
+
+/* ══════════════ BAŞLAT ══════════════ */
+(async () => {
+  $("#f-year").textContent = new Date().getFullYear();
+  $("#f-mevzuat").href = MEVZUAT_URL;
+  setupDrawerEvents(); setupWizardEvents(); setupCalc(); setupSearch();
+  const ok = await loadData();
+  renderChips();
+  if (ok) {
+    renderCats(); renderPopular(); renderFooter();
+    checkHash();
+    window.addEventListener("hashchange", checkHash);
+    setTimeout(() => toast(`${FAQS.length} soru yüklendi · ${KBD} ile arayın`), 900);
+  } else {
+    $("#cats").innerHTML = '<div style="grid-column:1/-1;padding:40px;text-align:center;color:var(--text-2)">İçerik şu anda görüntülenemiyor.</div>';
+    $("#open-wizard").disabled = true;
+  }
+})();
+
+</script>
+</body>
+</html>
